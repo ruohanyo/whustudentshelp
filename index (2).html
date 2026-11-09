@@ -1,0 +1,156 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WHUSH – WHU Students Help e.V.</title><meta name="description" content="WHUSH (WHU Students Help) is a student-run nonprofit at WHU Vallendar organizing charity concerts, the Rhine Clean-Up, and education projects in Rwanda, Colombia and beyond."><meta property="og:title" content="WHUSH – WHU Students Help e.V."><meta property="og:description" content="A student-run nonprofit at WHU Vallendar supporting education and community projects locally and abroad."><meta property="og:image" content="https://whush.de/assets/hero-event.jpg"><meta property="og:url" content="https://whush.de/"><link rel="stylesheet" href="styles.css"><style>
+/* Concert details over the homepage photo. */
+.concert-photo {
+  position: relative;
+  isolation: isolate;
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  min-height: clamp(520px, 50vw, 700px);
+  display: flex;
+  align-items: center;
+  padding: 56px 0;
+  text-align: left;
+}
+.concert-photo .hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: cover;
+  z-index: -2;
+}
+.concert-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,.5), rgba(0,0,0,.12));
+  z-index: -1;
+}
+.concert-countdown {
+  max-width: 760px;
+  color: #fff;
+  text-align: left;
+}
+.concert-countdown h2 {
+  margin: 0 0 20px;
+  color: #fff;
+  font-size: clamp(44px, 5vw, 70px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -.055em;
+  text-shadow: 0 2px 16px rgba(0,0,0,.2);
+}
+.concert-countdown .concert-date {
+  margin: 0 0 14px;
+  color: #fff;
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 700;
+}
+.concert-timezone { font-size: 14px; white-space: nowrap; }
+.concert-countdown .concert-venue {
+  margin: 0;
+  font-size: clamp(16px, 1.8vw, 21px);
+  line-height: 1.5;
+}
+.concert-clock {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(10px, 2vw, 28px);
+  width: 100%;
+  max-width: 680px;
+  margin: 28px 0 0;
+  padding: clamp(16px, 2.4vw, 28px);
+  border-radius: 16px;
+  background: rgba(0,0,0,.28);
+  color: #fff;
+  text-align: left;
+}
+.concert-clock-unit { min-width: 0; }
+.concert-clock-unit strong {
+  display: block;
+  font-size: clamp(32px, 6.2vw, 76px);
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.04em;
+  line-height: 1;
+}
+.concert-clock-unit span {
+  display: block;
+  margin-top: 10px;
+  font-size: clamp(9px, 1.1vw, 12px);
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.concert-countdown .concert-status { margin: 20px 0 0; font-size: 16px; }
+.concert-countdown [hidden] { display: none; }
+@media (max-width: 760px) {
+  .concert-photo { min-height: 500px; padding: 40px 0; }
+  .concert-countdown h2 { font-size: 44px; }
+  .concert-clock { gap: 8px; padding: 18px 14px; }
+}
+
+</style></head><body><script src="script.js"></script><script>renderCommon('home')</script>
+<main class="site">
+<div class="concert-photo"><img class="hero-img" src="assets/hero-event.jpg" alt="WHUSH event in a chapel">
+<div class="concert-overlay site">
+<section class="concert-countdown" id="concert-countdown" aria-labelledby="concert-title" data-event-time="2026-11-24T19:00:00+01:00">
+  <h2 id="concert-title">Charity Concert</h2>
+  <p class="concert-date"><time datetime="2026-11-24T19:00:00+01:00">24.11.2026 &middot; 19:00</time> <span class="concert-timezone">German time (CET)</span></p>
+  <p class="concert-venue" lang="de"><strong>Pfarrkirche<br>St. Marzellinus und Petrus in Vallendar</strong></p>
+  <div class="concert-clock" role="group" aria-label="Time until the Charity Concert" hidden>
+    <div class="concert-clock-unit"><strong data-countdown="days">00</strong><span>Days</span></div>
+    <div class="concert-clock-unit"><strong data-countdown="hours">00</strong><span>Hours</span></div>
+    <div class="concert-clock-unit"><strong data-countdown="minutes">00</strong><span>Minutes</span></div>
+    <div class="concert-clock-unit"><strong data-countdown="seconds">00</strong><span>Seconds</span></div>
+  </div>
+  <p class="concert-status" role="status" hidden></p>
+</section>
+</div></div>
+<section class="hero"><div class="hero-copy"><div class="eyebrow">WHU STUDENTS HELP</div><h1>Empowerment through<br>Education</h1><p class="lead">WHUSH, a social student initiative of WHU Otto Beisheim School of Management, dedicated to making an impact through local and international action</p><div class="actions social-actions"><a class="circle-btn" target="_blank" href="https://www.linkedin.com/company/whush-whu-students-help/about/?viewAsMember=true" aria-label="WHUSH LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.98H3.82V20h3.12V8.98ZM5.38 4a1.81 1.81 0 1 0 0 3.62A1.81 1.81 0 0 0 5.38 4Zm7.2 4.98H9.6V20h3.08v-5.78c0-1.52.29-2.99 2.17-2.99 1.86 0 1.88 1.74 1.88 3.09V20h3.08v-6.4c0-3.14-.67-5.55-4.34-5.55-1.76 0-2.94.97-3.43 1.88h-.04V8.98Z"/></svg></a><a class="circle-btn" target="_blank" href="https://www.instagram.com/whush_official/" aria-label="WHUSH Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.35a4.65 4.65 0 1 1 0 9.3 4.65 4.65 0 0 1 0-9.3Zm0 2a2.65 2.65 0 1 0 0 5.3 2.65 2.65 0 0 0 0-5.3Zm5.05-2.53a1.08 1.08 0 1 1 0 2.16 1.08 1.08 0 0 1 0-2.16Z"/></svg></a><a class="circle-btn" target="_blank" href="https://www.paypal.com/paypalme/whushev" aria-label="Donate to WHUSH"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08A6.03 6.03 0 0 1 16.5 3C19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35Z"/></svg></a></div></div></section>
+<section class="section-row"><h2>OUR MISSION</h2><p>WHUSH is committed to providing children in countries of the Global South with access to quality education by initiating and supporting innovative educational projects. Our goal is to open doors to new opportunities through education and give every child the chances for a better future.</p></section>
+<section class="section-row"><h2>OUR VISION</h2><p>Our vision is to be recognized as the leading German student initiative that brings about transformative change in countries of the Global South through education. We strive to create a world where every child, no matter where they live, has access to the resources they need to reach their full potential and make a sustainable contribution to their community and the world.<br>As a pioneer among German student initiatives, WHUSH transforms education in developing countries and creates pathways to a more equitable world.</p></section>
+<section><div class="projects-head"><h2>OUR PROJECTS</h2></div><div class="grid" id="homeProjects"></div><div class="center"><a class="pill" href="projects.html">Learn More →</a></div></section>
+<section class="involved"><h2>How to get involved</h2><p>Explore projects, meet the team, support with a donation, or start a conversation with us.</p><div class="tiles"><a class="tile" href="projects.html"><h3>Projects</h3><p>See where WHUSH students are already helping and what comes next.</p></a><a class="tile" href="team.html"><h3>Team</h3><p>Meet the students coordinating projects, partnerships, and outreach.</p></a><a class="tile black" target="_blank" href="https://www.paypal.com/paypalme/whushev"><h3>Donate</h3><p>Help us move faster when people and projects need support.</p></a><a class="tile" href="#footer"><h3>Contact</h3><p>Write to us about collaborations, ideas, donations, or volunteering.</p></a></div></section>
+</main><script>document.getElementById('homeProjects').innerHTML=projects.slice(0,4).map(projectCard).join('')</script><script>
+(() => {
+  const section = document.getElementById('concert-countdown');
+  if (!section) return;
+
+  // 19:00 in Germany on 24 November is 18:00 UTC (CET, UTC+01:00).
+  // An explicit offset keeps the deadline identical in every visitor's timezone.
+  const eventTime = Date.parse(section.dataset.eventTime);
+  const clock = section.querySelector('.concert-clock');
+  const status = section.querySelector('.concert-status');
+  const fields = ['days', 'hours', 'minutes', 'seconds'].map(unit =>
+    section.querySelector(`[data-countdown="${unit}"]`)
+  );
+
+  function update() {
+    const remaining = Math.max(0, Math.ceil((eventTime - Date.now()) / 1000));
+    const values = [
+      Math.floor(remaining / 86400),
+      Math.floor(remaining / 3600) % 24,
+      Math.floor(remaining / 60) % 60,
+      remaining % 60
+    ];
+    fields.forEach((field, index) => {
+      field.textContent = String(values[index]).padStart(2, '0');
+    });
+    clock.hidden = false;
+    if (!remaining) {
+      status.textContent = 'The countdown is over — thank you for supporting our Charity Concert!';
+      status.hidden = false;
+    }
+    return remaining;
+  }
+
+  if (update() > 0) {
+    const timer = setInterval(() => {
+      if (update() === 0) clearInterval(timer);
+    }, 1000);
+  }
+})();
+
+</script></body></html>
